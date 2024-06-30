@@ -1,4 +1,4 @@
-package SwiggyAsde;
+package SwiggyAsde.model;
 
 public class Player {
     private Integer health;

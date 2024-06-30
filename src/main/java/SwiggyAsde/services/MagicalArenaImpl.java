@@ -1,20 +1,22 @@
-package SwiggyAsde.model;
+package SwiggyAsde.services;
 
-import SwiggyAsde.Player;
+import SwiggyAsde.model.Player;
 
 import java.util.Random;
 
-public class MagicalArenaImpl implements MagicalArena{
-    Random randomNumber = new Random();
+public class MagicalArenaImpl implements MagicalArena {
+    static Random randomNumber = new Random();
 
-    @Override
-    public Integer rollDice() {
+    public MagicalArenaImpl() {
+    }
+
+    public static Integer rollDice() {
 //        1 to 6 sided dice
         return randomNumber.nextInt(6) + 1;
     }
 
     @Override
-    public void fight(Player attacker, Player defender) {
+    public  void fight(Player attacker, Player defender) {
         // rolling for both the players
         Integer attackRoll = rollDice();
         Integer defenseRoll = rollDice();
